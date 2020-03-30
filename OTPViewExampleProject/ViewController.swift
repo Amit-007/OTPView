@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import OTPView
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var otpView: OTPView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        otpView.numberOfDigits = 5
+        otpView.borderWidth = 0.5
         // Do any additional setup after loading the view.
     }
 

@@ -18,6 +18,10 @@
 		3007A96524320C2F00E736E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3007A96424320C2F00E736E2 /* Assets.xcassets */; };
 		3007A96824320C2F00E736E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3007A96624320C2F00E736E2 /* LaunchScreen.storyboard */; };
 		3007A97324320C3000E736E2 /* OTPViewExampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A97224320C3000E736E2 /* OTPViewExampleProjectTests.swift */; };
+		3007A97E24320F2F00E736E2 /* OTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A97D24320F2F00E736E2 /* OTPProtocol.swift */; };
+		3007A98124320F6E00E736E2 /* OTPInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A98024320F6E00E736E2 /* OTPInputField.swift */; };
+		3007A9832432108300E736E2 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A9822432108300E736E2 /* OTPView.swift */; };
+		3007A9862432121900E736E2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A9852432121900E736E2 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		3007A96E24320C2F00E736E2 /* OTPViewExampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTPViewExampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3007A97224320C3000E736E2 /* OTPViewExampleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewExampleProjectTests.swift; sourceTree = "<group>"; };
 		3007A97424320C3000E736E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3007A97D24320F2F00E736E2 /* OTPProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPProtocol.swift; sourceTree = "<group>"; };
+		3007A98024320F6E00E736E2 /* OTPInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInputField.swift; sourceTree = "<group>"; };
+		3007A9822432108300E736E2 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		3007A9852432121900E736E2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,9 @@
 		3007A93A2431F90400E736E2 /* OTPView */ = {
 			isa = PBXGroup;
 			children = (
+				3007A9842432120000E736E2 /* Utility */,
+				3007A97C24320D8000E736E2 /* Protocol */,
+				3007A97B24320D7800E736E2 /* View */,
 				3007A93B2431F90400E736E2 /* OTPView.h */,
 				3007A93C2431F90400E736E2 /* Info.plist */,
 			);
@@ -153,6 +164,31 @@
 				3007A97424320C3000E736E2 /* Info.plist */,
 			);
 			path = OTPViewExampleProjectTests;
+			sourceTree = "<group>";
+		};
+		3007A97B24320D7800E736E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3007A98024320F6E00E736E2 /* OTPInputField.swift */,
+				3007A9822432108300E736E2 /* OTPView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3007A97C24320D8000E736E2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3007A97D24320F2F00E736E2 /* OTPProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3007A9842432120000E736E2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3007A9852432121900E736E2 /* UIView+Extension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +288,7 @@
 				TargetAttributes = {
 					3007A9372431F90400E736E2 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					3007A9402431F90400E736E2 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -325,6 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3007A97E24320F2F00E736E2 /* OTPProtocol.swift in Sources */,
+				3007A98124320F6E00E736E2 /* OTPInputField.swift in Sources */,
+				3007A9862432121900E736E2 /* UIView+Extension.swift in Sources */,
+				3007A9832432108300E736E2 /* OTPView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +554,7 @@
 		3007A94D2431F90400E736E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3P64BP7GB9;
@@ -529,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stride247.OTPView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -537,6 +580,7 @@
 		3007A94E2431F90400E736E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3P64BP7GB9;
@@ -561,6 +605,7 @@
 		3007A9502431F90400E736E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P64BP7GB9;
 				INFOPLIST_FILE = OTPViewTests/Info.plist;
@@ -579,6 +624,7 @@
 		3007A9512431F90400E736E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3P64BP7GB9;
 				INFOPLIST_FILE = OTPViewTests/Info.plist;
