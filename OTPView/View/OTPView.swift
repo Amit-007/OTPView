@@ -252,7 +252,8 @@ extension OTPView {
 
 
 extension OTPView: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string.count > 1, string.count == textFields.count, string.isNumeric() {
             enteredCode.removeAll()
             for index in 0..<string.count {
@@ -260,7 +261,7 @@ extension OTPView: UITextFieldDelegate {
                 enteredCode.append(character)
                 textFields[index].text = character
             }
-            delegate?.verificationCode(self, didFinishEnteringCode: string)
+            delegate?.verificationCode(self, didFinishedEnteringCode: string)
             textField.resignFirstResponder()
             return false
         }
