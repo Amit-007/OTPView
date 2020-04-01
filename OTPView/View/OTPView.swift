@@ -158,6 +158,10 @@ public class OTPView: UIView {
         super.init(coder: aDecoder)
     }
     
+    public override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     private func updateView() {
         if numberOfDigits > noDigits {
             textFields.removeAll()
@@ -217,7 +221,7 @@ public class OTPView: UIView {
     
     /// Clears the textfields data & remove from array containing verification code
     func clearTextInVerificationCodeView() {
-        textFields.compactMap { $0.text = emptyCode }
+        _ = textFields.compactMap { $0.text = emptyCode }
         enteredCode.removeAll()
     }
 }

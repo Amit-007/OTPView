@@ -9,7 +9,7 @@
 import UIKit
 
 /// Implement this delegate to notify when the user completes entering the code
-protocol OTPProtocol: class {
+public protocol OTPProtocol: class {
     
     /// This delegate method will notify when the user completes entering code
     ///

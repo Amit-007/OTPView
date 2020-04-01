@@ -12,6 +12,7 @@ public extension UIView {
     
     func fillSuperView() {
         if let superview = superview {
+            translatesAutoresizingMaskIntoConstraints = false
             [topAnchor.constraint(equalTo: superview.topAnchor),
              leadingAnchor.constraint(equalTo: superview.leadingAnchor),
              trailingAnchor.constraint(equalTo: superview.trailingAnchor),

@@ -8,14 +8,13 @@
 
 import UIKit
 
-final class OTPInputField: UITextField {
-    
-    override func deleteBackward() {
+/// This class represents OTP Input Fields
+open class OTPInputField: UITextField {
+    override open func deleteBackward() {
         super.deleteBackward()
         _ = delegate?.textField?(self, shouldChangeCharactersIn: NSRange(location: .zero, length: .zero), replacementString: "")
     }
-    
-    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+    override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return false
     }
 }

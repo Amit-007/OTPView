@@ -24,6 +24,7 @@
 		3007A9862432121900E736E2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A9852432121900E736E2 /* UIView+Extension.swift */; };
 		3007A98A24321F8400E736E2 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A98924321F8400E736E2 /* Collection+Extension.swift */; };
 		3007A98C24321FD300E736E2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3007A98B24321FD300E736E2 /* String+Extension.swift */; };
+		3007A98E2434554400E736E2 /* OTPView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3007A9382431F90400E736E2 /* OTPView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3007A98E2434554400E736E2 /* OTPView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +113,7 @@
 				3007A95724320C2C00E736E2 /* OTPViewExampleProject */,
 				3007A97124320C2F00E736E2 /* OTPViewExampleProjectTests */,
 				3007A9392431F90400E736E2 /* Products */,
+				3007A98D2434554400E736E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +198,13 @@
 				3007A98B24321FD300E736E2 /* String+Extension.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		3007A98D2434554400E736E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
